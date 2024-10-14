@@ -1,4 +1,4 @@
-import React, {useContext} from "react"
+import React, { useContext } from "react"
 import { MainScreenContainer, MainScreenLayoutContainer } from './syledMainScreen'
 import Control from '../../components/ControlChronometer/ControlChronometer'
 import Chronometer from '../../components/TimeView/TimeView'
@@ -8,18 +8,20 @@ import ControlTimer from '../../components/ControlTimer/ControlTimer'
 import ControlGym from '../../components/ControlGym/ControlGym'
 
 
-const MainScreen = () =>{
+const MainScreen = () => {
 
-    const {isCronometro, isTimer, isGym} = useContext(GlobalStateContext)
+    const { isOptions } = useContext(GlobalStateContext)
 
-    return(
+    return (
         <MainScreenContainer>
-            <MainScreenLayoutContainer>
-                <Chronometer></Chronometer>
-                {isCronometro? <Control/> : isTimer? <ControlTimer/>: isGym? <ControlGym/> : <Control/> }
-                <OptionTimes/>
-            </MainScreenLayoutContainer>
-            
+            <div>
+                <MainScreenLayoutContainer>
+                    <Chronometer></Chronometer>
+                    {isOptions === 'cronometro' ? <Control /> : isOptions === 'timer' ? <ControlTimer /> : isOptions === 'gym' ? <ControlGym /> : <Control />}
+                    <OptionTimes />
+                </MainScreenLayoutContainer>
+            </div>
+
         </MainScreenContainer>
     )
 }
