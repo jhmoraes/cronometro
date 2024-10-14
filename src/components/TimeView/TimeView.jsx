@@ -1,22 +1,27 @@
-import React, {useContext} from "react"
-import { ChronometerContainer, ChronometerProgressLine } from "./styledTimeView"
+import React, { useContext } from "react"
+import { ChronometerContainer, ChronometerProgressLine, Time } from "./styledTimeView"
 import GlobalStateContext from '../../globalState/GlobalStateContext'
 
 
-const TimeView = () =>{
+const TimeView = () => {
 
-    const {secTime, minTime, hourTime} = useContext(GlobalStateContext)
+    const { secTime, minTime, hourTime, isInfo } = useContext(GlobalStateContext)
 
 
-    return(
+    return (
         <ChronometerContainer>
             <ChronometerProgressLine>
-                {hourTime <= 9? <p>0{hourTime}:</p> : <p>{hourTime}:</p>}
-                {minTime <= 9? <p>0{minTime}:</p> : <p>{minTime}:</p>}
-                {secTime <= 9? <p>0{secTime}</p>: <p>{secTime}</p>}
+                <div>
+                    <p>{isInfo}</p>
+                </div>
                 
-            </ChronometerProgressLine>           
-            
+                <Time>
+                    {hourTime <= 9 ? <p>0{hourTime}:</p> : <p>{hourTime}:</p>}
+                    {minTime <= 9 ? <p>0{minTime}:</p> : <p>{minTime}:</p>}
+                    {secTime <= 9 ? <p>0{secTime}</p> : <p>{secTime}</p>}
+                </Time>
+            </ChronometerProgressLine>
+
         </ChronometerContainer>
     )
 }

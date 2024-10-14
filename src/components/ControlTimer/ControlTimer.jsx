@@ -1,25 +1,30 @@
 import React, { useContext } from "react"
-import { ControlTimerContainer, InputContainer } from './styledControlTimer'
-import { Button } from '../../components/common/styledCommon'
+import { ControlTimerContainer, InputContainer, ButtonContainer } from './styledControlTimer'
+import { Button } from '../Common/styledCommon'
 import GlobalStateContext from '../../globalState/GlobalStateContext'
+import { TimeButtonSec, TimeButtonMin, TimeButtonHour } from '../../components/TimeButton/TimeButton'
+import pausa from '../../img/pausa.png'
+import botaoPlay from '../../img/botaoPlay.png'
 
 
 const ControlTimer = () => {
 
-    const { } = useContext(GlobalStateContext)
+    const { onChangeHour, onChangeMin, onChangeSec, secTime, minTime, hourTime, alternateStartTimer, alternatePaused } = useContext(GlobalStateContext)
 
 
     return (
         <ControlTimerContainer>
 
             <InputContainer>
-                <input type="number" value="00" />
-                <input type="number" value="00" />
-                <input type="number" value="00" />
+                <TimeButtonHour />
+                <TimeButtonMin />
+                <TimeButtonSec />
             </InputContainer>
 
-            <Button>Começar</Button>
-            <Button>Pausar</Button>
+            <ButtonContainer>
+                <button onClick={alternateStartTimer}><img src={botaoPlay}/></button>
+                <button onClick={alternatePaused}><img src={pausa}/></button>
+            </ButtonContainer>
         </ControlTimerContainer>
     )
 }

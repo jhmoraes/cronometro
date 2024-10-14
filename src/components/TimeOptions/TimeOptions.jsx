@@ -8,7 +8,7 @@ import hourglassImg from '../../img/hourglass.png'
 
 const TimeOptions = () =>{
 
-    const {stopwatch, timer, gym} = useContext(GlobalStateContext)
+    const {stopwatch, timer, gym,} = useContext(GlobalStateContext)
 
     return(
         <OptionTimesContainer>

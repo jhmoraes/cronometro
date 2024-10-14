@@ -1,24 +1,51 @@
-import React, {useContext} from "react"
-import { ControlGymContainer} from './styledControlGym'
-import {Button} from '../common/styledCommon'
+import React, { useContext } from "react"
+import { ControlGymContainer } from './styledControlGym'
+import { Button } from '../Common/styledCommon'
 import GlobalStateContext from '../../globalState/GlobalStateContext'
 
 
-const ControlGym = () =>{
+const ControlGym = () => {
 
-    const {} = useContext(GlobalStateContext)
+    const { rounds, durationSec, breakSec, onChangeRound, onChangeDuration, onChangeBreak, alternateGym, alternatePaused, restore} = useContext(GlobalStateContext)
 
-    return(
+    return (
         <ControlGymContainer>
-            <label>Rodadas <input/> </label>
-            <label>Duração <input/> </label>
-            <label>Descanço <input/> </label>
-            <Button>Iniciar</Button>
-            <Button>Pausar</Button>
-            <Button>Parar</Button>
+            <label>Rounds
+                <input
+                    type="number"
+                    value={rounds}
+                    onChange={onChangeRound}
+                    min="0"
+                    max="90"
+                />
+            </label>
+
+            <label>Go
+                <input
+                    type="number"
+                    value={durationSec}
+                    onChange={onChangeDuration}
+                    min="0"
+                    max="59"
+                />
+                
+            </label>
+
+            <label>Stop
+                <input
+                    type="number"
+                    value={breakSec}
+                    onChange={onChangeBreak}
+                    min="0"
+                    max="59"
+                />
+            </label>
+            <Button onClick={alternateGym}>Iniciar</Button>
+            <Button onClick={alternatePaused}>Pausar</Button>
+            <Button onClick={restore}>Zerar</Button>
 
         </ControlGymContainer>
-        
+
     )
 }
 
