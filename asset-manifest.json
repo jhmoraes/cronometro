@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cronometro/static/css/main.60dc8d4f.css",
-    "main.js": "/cronometro/static/js/main.934ebf57.js",
+    "main.js": "/cronometro/static/js/main.1ec73c56.js",
     "index.html": "/cronometro/index.html",
     "main.60dc8d4f.css.map": "/cronometro/static/css/main.60dc8d4f.css.map",
-    "main.934ebf57.js.map": "/cronometro/static/js/main.934ebf57.js.map"
+    "main.1ec73c56.js.map": "/cronometro/static/js/main.1ec73c56.js.map"
   },
   "entrypoints": [
     "static/css/main.60dc8d4f.css",
-    "static/js/main.934ebf57.js"
+    "static/js/main.1ec73c56.js"
   ]
 }
