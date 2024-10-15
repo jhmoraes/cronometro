@@ -1,7 +1,7 @@
 import React, {useContext} from "react"
 import { ControlContainer} from './styledControlChronometer'
 import GlobalStateContext from '../../globalState/GlobalStateContext'
-import { Button } from '../../components/Common/styledCommon'
+import { Button } from '../common/styledCommon'
 import botaoPlay from '../../img/botaoPlay.png'
 import pausa from '../../img/pausa.png'
 import restaurar from '../../img/restaurar.png'

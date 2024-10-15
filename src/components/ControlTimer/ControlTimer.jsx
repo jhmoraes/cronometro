@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { ControlTimerContainer, InputContainer, ButtonContainer } from './styledControlTimer'
-import { Button } from '../Common/styledCommon'
+import { Button } from '../common/styledCommon'
 import GlobalStateContext from '../../globalState/GlobalStateContext'
 import { TimeButtonSec, TimeButtonMin, TimeButtonHour } from '../../components/TimeButton/TimeButton'
 import pausa from '../../img/pausa.png'
