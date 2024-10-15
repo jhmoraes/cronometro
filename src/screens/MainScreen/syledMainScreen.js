@@ -18,8 +18,6 @@ export const MainScreenContainer = styled.div`
 
 `
 
-
-
 export const MainScreenLayoutContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -27,11 +25,12 @@ export const MainScreenLayoutContainer = styled.div`
     justify-content: space-between;
     border-radius: 38px;
     background-color: #F5F5F5;
+    height: calc(50vh * 16 / 10);
+    width: calc(30vh * 16 / 10);
     box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
                 -6px -6px 10px -1px rgba(0,0,0,0.15);
 
-    @media screen and (max-width: 768px){
-        border-radius: 0px;
+   @media screen and (max-width: 768px){
         height: 100vh;
         width: 100vw;
     }
@@ -39,11 +38,24 @@ export const MainScreenLayoutContainer = styled.div`
     @media screen and (min-width: 769px) and (max-width: 1024px){
         height: 80vh;
         width: 50vw; 
-    }
+    } 
+`
 
-    @media screen and (min-width: 1025px) {
-        height: 80vh;
-        width: 30vw;
+export const ContainerCronometer = styled.div`
+    height: calc(25% * 16 / 10);
+    width: calc(50% * 16 / 10);
+    margin-bottom: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin-top: 3rem;
+
+    @media screen and (min-width: 569px) and (max-width: 768px){
+        height: calc(35% * 4 / 3);
+        width: calc(50% *  4 / 3);
+      
     }
 `
 

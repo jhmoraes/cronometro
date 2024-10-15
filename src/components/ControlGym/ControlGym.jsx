@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { ControlGymContainer } from './styledControlGym'
-import { Button } from '../Common/styledCommon'
+import { Button } from '../common/styledCommon'
 import GlobalStateContext from '../../globalState/GlobalStateContext'
 
 
