@@ -31,6 +31,7 @@ export const MainScreenLayoutContainer = styled.div`
                 -6px -6px 10px -1px rgba(0,0,0,0.15);
 
    @media screen and (max-width: 768px){
+        border-radius: 0px;
         height: 100vh;
         width: 100vw;
     }
